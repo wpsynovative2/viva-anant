@@ -1,0 +1,114 @@
+import type { SVGProps } from "react";
+
+// Minimal stroke icon set (24×24, currentColor) so the page ships no icon library.
+const paths: Record<string, React.ReactNode> = {
+  phone: <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z" />,
+  whatsapp: (
+    <>
+      <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+      <path d="M9 8.5c0 3.3 3.2 6.5 6.5 6.5l1-1.6-2.1-1-1 .9a4.6 4.6 0 0 1-2.2-2.2l.9-1-1-2.1Z" />
+    </>
+  ),
+  mail: (
+    <>
+      <rect x="2" y="4" width="20" height="16" rx="2" />
+      <path d="m22 7-10 6L2 7" />
+    </>
+  ),
+  pin: (
+    <>
+      <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z" />
+      <circle cx="12" cy="10" r="3" />
+    </>
+  ),
+  arrow: <path d="M5 12h14M13 6l6 6-6 6" />,
+  download: <path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16" />,
+  close: <path d="M18 6 6 18M6 6l12 12" />,
+  menu: <path d="M4 7h16M4 12h16M4 17h10" />,
+  check: <path d="M20 6 9 17l-5-5" />,
+  plus: <path d="M12 5v14M5 12h14" />,
+  shield: (
+    <>
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" />
+      <path d="m9 12 2 2 4-4" />
+    </>
+  ),
+  building: (
+    <>
+      <rect x="4" y="2" width="16" height="20" rx="1" />
+      <path d="M9 22v-4h6v4M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01" />
+    </>
+  ),
+  sparkle: <path d="M12 3l1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2L12 3ZM5 3v4M3 5h4M19 17v4M17 19h4" />,
+  balcony: (
+    <>
+      <path d="M3 21h18M5 21v-7h14v7M9 14v7M15 14v7M5 14V6a7 7 0 0 1 14 0v8" />
+    </>
+  ),
+  lobby: (
+    <>
+      <path d="M3 21h18M5 21V8l7-5 7 5v13" />
+      <path d="M9 21v-6h6v6" />
+    </>
+  ),
+  bolt: <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z" />,
+  store: (
+    <>
+      <path d="M3 9l1.5-5h15L21 9M3 9v11h18V9M3 9h18" />
+      <path d="M9 20v-6h6v6" />
+    </>
+  ),
+  train: (
+    <>
+      <rect x="5" y="3" width="14" height="14" rx="3" />
+      <path d="M5 11h14M9 21l-2-4M15 21l2-4M9 14h.01M15 14h.01" />
+    </>
+  ),
+  school: (
+    <>
+      <path d="M22 10 12 5 2 10l10 5 10-5Z" />
+      <path d="M6 12v5c3 2 9 2 12 0v-5" />
+    </>
+  ),
+  health: (
+    <>
+      <path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7Z" />
+      <path d="M12 9v5M9.5 11.5h5" />
+    </>
+  ),
+  bag: (
+    <>
+      <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+      <path d="M3 6h18M16 10a4 4 0 0 1-8 0" />
+    </>
+  ),
+  expand: <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />,
+  chevron: <path d="m6 9 6 6 6-6" />,
+  rera: (
+    <>
+      <path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9Z" />
+      <path d="M14 3v6h6M8 13h8M8 17h5" />
+    </>
+  ),
+};
+
+export type IconName = keyof typeof paths;
+
+export default function Icon({ name, ...props }: { name: string } & SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.7}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      width="1em"
+      height="1em"
+      {...props}
+    >
+      {paths[name]}
+    </svg>
+  );
+}
