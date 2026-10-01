@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Montserrat, Playfair_Display } from "next/font/google";
+import localFont from "next/font/local";
 import Script from "next/script";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -8,27 +8,34 @@ import MobileCtaBar from "@/components/MobileCtaBar";
 import { site } from "@/lib/site";
 import "./globals.css";
 
+// Fonts are self-hosted (app/fonts, latin subset, variable weights) so the build never
+// fetches from Google — next/font/google fails on some build hosts (e.g. Vercel + Turbopack).
+
 // Heading: Mozarela (brand) → Playfair Display as the closest web-safe equivalent.
-const playfair = Playfair_Display({
+const playfair = localFont({
   variable: "--font-playfair",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
+  src: [
+    { path: "./fonts/playfair-display-variable.woff2", weight: "400 700", style: "normal" },
+    { path: "./fonts/playfair-display-italic-variable.woff2", weight: "400 700", style: "italic" },
+  ],
   display: "swap",
+  fallback: ["Georgia", "serif"],
 });
 // Sub-heading: Sitka Display → Cormorant Garamond.
-const cormorant = Cormorant_Garamond({
+const cormorant = localFont({
   variable: "--font-cormorant",
-  subsets: ["latin"],
-  weight: ["500", "600"],
+  src: "./fonts/cormorant-garamond-variable.woff2",
+  weight: "300 700",
   display: "swap",
+  fallback: ["Georgia", "serif"],
 });
 // Body: Montserrat (brand).
-const montserrat = Montserrat({
+const montserrat = localFont({
   variable: "--font-montserrat",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  src: "./fonts/montserrat-variable.woff2",
+  weight: "400 700",
   display: "swap",
+  fallback: ["system-ui", "sans-serif"],
 });
 
 const title = "Viva Anant Virar West | 1, 2 & 3 BHK Flats by Viva Group";
