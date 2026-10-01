@@ -251,7 +251,14 @@ dialog[open] > * {
   to { opacity: 1; transform: none; }
 }
 
-/* reCAPTCHA badge hidden; the required notice is shown under every form instead. */
+/* reCAPTCHA badge: kept visible (required when Google's links aren't shown), lifted above the
+   mobile action bar and, on larger screens, above the floating WhatsApp button. */
 .grecaptcha-badge {
-  visibility: hidden !important;
+  bottom: calc(72px + env(safe-area-inset-bottom)) !important;
+  z-index: 30;
+}
+@media (min-width: 768px) {
+  .grecaptcha-badge {
+    bottom: 96px !important;
+  }
 }

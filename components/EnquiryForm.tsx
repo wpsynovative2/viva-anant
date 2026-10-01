@@ -265,16 +265,17 @@ export default function EnquiryForm({
       </button>
 
       <p className={`mt-4 text-[11px] leading-relaxed ${dark ? "text-white/55" : "text-ink/55"}`}>
-        By submitting, you authorise Viva Group and its representatives to contact you via call, SMS, email or
-        WhatsApp, overriding DND/NDNC. This site is protected by reCAPTCHA and the Google{" "}
-        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">
-          Privacy Policy
+        By submitting, you agree to our{" "}
+        {/* New tab, so a half-filled form isn't lost. */}
+        <a href="/terms-and-conditions" target="_blank" className="underline">
+          Terms &amp; Conditions
         </a>{" "}
         and{" "}
-        <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline">
-          Terms of Service
-        </a>{" "}
-        apply.
+        <a href="/privacy-policy" target="_blank" className="underline">
+          Privacy Policy
+        </a>
+        , and authorise Viva Group and its representatives to contact you via call, SMS, email or WhatsApp, overriding
+        DND/NDNC.
       </p>
 
       {submitting && (

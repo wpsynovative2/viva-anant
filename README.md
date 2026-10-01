@@ -24,12 +24,13 @@ npm run build && npm start   # production
 | `NEXT_PUBLIC_SITE_URL` | Canonical URL (default `https://www.vivaanant.in`) |
 | `NEXT_PUBLIC_RECAPTCHA_SITE_KEY` / `RECAPTCHA_SECRET_KEY` | reCAPTCHA v3 keys |
 | `RECAPTCHA_MIN_SCORE` | Minimum score to accept (default `0.5`) |
+| `SELLDO_API_KEY` / `SELLDO_SRD` | Sell.do CRM API key and the VIVA ANANT campaign SRD |
 | `GOOGLE_SCRIPT_URL` | Apps Script web-app `/exec` URL |
 | `GOOGLE_SCRIPT_TOKEN` | Must equal the `TOKEN` script property |
 | `NEXT_PUBLIC_GTM_ID` | Optional Google Tag Manager container. Pushes `generate_lead` on /thank-you |
 | `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | Optional Search Console verification |
 
-Flow: form (client validation) → `POST /api/enquiry`. The route re-validates, checks the honeypot, applies a rate limit and verifies reCAPTCHA. It then posts to Apps Script, which appends a row and emails sales, and the page redirects to `/thank-you`.
+Flow: form (client validation) → `POST /api/enquiry`. The route re-validates, checks the honeypot, applies a rate limit and verifies reCAPTCHA. It then pushes the lead, in parallel, to **Sell.do** (name, phone, email, a note with configuration/source/UTM, tagged to the project via the SRD) and, if configured, to **Apps Script**, which appends a row and emails sales. If at least one channel accepts the lead, the page redirects to `/thank-you`. Delivery code lives in `lib/leads.ts`.
 
 ## Structure
 

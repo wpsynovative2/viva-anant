@@ -28,5 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
       images: images.map((i) => `${site.url}/images/${i}.webp`),
     },
+    { url: `${site.url}/privacy-policy`, lastModified: new Date("2026-10-01"), changeFrequency: "yearly", priority: 0.3 },
+    { url: `${site.url}/terms-and-conditions`, lastModified: new Date("2026-10-01"), changeFrequency: "yearly", priority: 0.3 },
   ];
 }

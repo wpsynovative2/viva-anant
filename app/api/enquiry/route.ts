@@ -5,6 +5,7 @@ import {
   CONFIG_OPTIONS,
   type EnquiryPayload,
 } from "@/lib/validation";
+import { channels, type Lead } from "@/lib/leads";
 
 // Server-side leg of the enquiry form:
 // 1. re-validate input, 2. verify reCAPTCHA v3, 3. forward to Google Apps Script (Sheet + email).
@@ -80,13 +81,12 @@ export async function POST(request: Request) {
     for (const [k, v] of Object.entries(body.utm).slice(0, 10)) utm[clip(k, 30)] = clip(v, 120);
   }
 
-  const lead = {
-    token: process.env.GOOGLE_SCRIPT_TOKEN || "",
+  const lead: Lead = {
     timestamp: new Date().toISOString(),
     name,
     mobile: `+91${mobile}`,
     email,
-    configuration,
+    configuration: configuration || "",
     source: clip(body.source, 80),
     page: clip(body.page, 300),
     utm_source: utm.utm_source || "",
@@ -101,30 +101,18 @@ export async function POST(request: Request) {
     user_agent: clip(request.headers.get("user-agent"), 250),
   };
 
-  const scriptUrl = process.env.GOOGLE_SCRIPT_URL;
-  if (!scriptUrl) {
-    console.error("[enquiry] GOOGLE_SCRIPT_URL is not set. Lead not delivered:", { ...lead, token: undefined });
+  // Deliver to every configured channel in parallel; the enquiry succeeds if at least one accepts it.
+  const active = channels.filter((c) => c.enabled());
+  if (!active.length) {
+    console.error("[enquiry] No lead channel configured (Sell.do / Google Sheet). Lead not delivered:", lead);
     return json({ ok: false, error: "Our enquiry service is temporarily unavailable. Please call us directly." }, 503);
   }
 
-  try {
-    const res = await fetch(scriptUrl, {
-      method: "POST",
-      headers: { "Content-Type": "text/plain;charset=utf-8" },
-      body: JSON.stringify(lead),
-      redirect: "follow",
-      cache: "no-store",
-    });
-    const text = await res.text();
-    let result: { ok?: boolean; error?: string } = {};
-    try {
-      result = JSON.parse(text);
-    } catch {
-      throw new Error(`Apps Script returned non-JSON (HTTP ${res.status})`);
-    }
-    if (!result.ok) throw new Error(result.error || "Apps Script rejected the lead");
-  } catch (err) {
-    console.error("[enquiry] Failed to deliver lead to Google Apps Script:", err);
+  const results = await Promise.allSettled(active.map((c) => c.push(lead)));
+  results.forEach((r, i) => {
+    if (r.status === "rejected") console.error(`[enquiry] ${active[i].name} delivery failed:`, r.reason);
+  });
+  if (!results.some((r) => r.status === "fulfilled")) {
     return json({ ok: false, error: "Something went wrong while sending your enquiry. Please try again or call us." }, 502);
   }
 

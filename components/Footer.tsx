@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Icon from "./Icon";
 import EnquiryButton from "./EnquiryButton";
 import { Container } from "./ui";
@@ -84,7 +85,17 @@ export default function Footer() {
           <p>
             © {year} {site.developer}. All rights reserved.
           </p>
-          <p>MahaRERA Reg. No. {site.rera}</p>
+          <p className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1">
+            <Link href="/privacy-policy" className="transition hover:text-blush-300">
+              Privacy Policy
+            </Link>
+            <span aria-hidden="true">·</span>
+            <Link href="/terms-and-conditions" className="transition hover:text-blush-300">
+              Terms &amp; Conditions
+            </Link>
+            <span aria-hidden="true">·</span>
+            <span>MahaRERA Reg. No. {site.rera}</span>
+          </p>
         </div>
       </Container>
     </footer>
