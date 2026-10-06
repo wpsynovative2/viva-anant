@@ -12,7 +12,7 @@ export default function Faq() {
           <SectionHeading eyebrow="FAQs" lead="Questions homebuyers" id="faq-title" title={<span className="italic">Ask Us</span>} />
           <div data-reveal className="bg-bokeh mt-10 rounded-[2rem] p-7">
             <p className="font-display text-2xl text-plum-800">Still have a question?</p>
-            <p className="mt-2 text-sm text-ink/70">Our relationship managers are happy to help — pricing, plans, loans or site visits.</p>
+            <p className="mt-2 text-sm text-ink/70">Get clarity on plans, pricing, loans or site visits from our team.</p>
             <div className="mt-5 flex flex-wrap gap-3">
               <EnquiryButton source="FAQ" title="Ask Our Team">Ask Our Team</EnquiryButton>
               <a href={telHref} className="inline-flex items-center gap-2 rounded-full border border-plum-700/30 px-6 py-3 text-sm font-semibold text-plum-700 transition hover:bg-plum-700 hover:text-white">

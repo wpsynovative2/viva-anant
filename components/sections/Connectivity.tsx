@@ -10,10 +10,10 @@ export default function Connectivity() {
     <section id="connectivity" aria-labelledby="connectivity-title" className="relative overflow-hidden bg-cream py-20 sm:py-28">
       <Container>
         <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
-          <SectionHeading eyebrow="Location & Connectivity" lead="Everything you need," id="connectivity-title" title={<span className="italic">Close to Home</span>} />
+          <SectionHeading eyebrow="Location & Connectivity" lead="The world outside has" id="connectivity-title" title={<span className="italic">Wings Too</span>} />
           <p data-reveal className="max-w-md leading-relaxed text-ink/70">
-            At Y K Nagar, Virar West — minutes from Virar station, Narangi Bypass Road, reputed schools, hospitals and the city&apos;s
-            favourite shopping and dining.
+            A well-connected home gives life the freedom to move, explore and grow. With the city and its everyday conveniences within
+            easy reach, more possibilities begin just beyond your doorstep.
           </p>
         </div>
 
@@ -62,7 +62,7 @@ export default function Connectivity() {
                 </ul>
               </div>
             ))}
-            <div data-reveal className="bg-brand-gradient flex flex-col justify-between gap-4 rounded-3xl p-6 text-white sm:col-span-2 lg:col-span-1 xl:col-span-2">
+            <div data-reveal className="bg-brand-gradient flex flex-col justify-between gap-4 rounded-3xl p-6 text-white">
               <p className="font-display text-2xl">Visit the site &amp; experience the neighbourhood.</p>
               <EnquiryButton source="Connectivity - Site Visit" title="Book a Site Visit" variant="blush" className="self-start">
                 Book a Site Visit <Icon name="arrow" />
@@ -74,7 +74,7 @@ export default function Connectivity() {
         {/* Upcoming infrastructure */}
         <div className="mt-24">
           <h3 data-reveal className="font-display text-3xl text-plum-800 sm:text-4xl">
-            Infrastructure shaping <span className="italic text-plum-600">Virar&apos;s future</span>
+            Virar is the next <span className="italic text-plum-600">future-ready destination</span>
           </h3>
           <ul className="mt-8 grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4">
             {infrastructure.map((it, i) => (

@@ -12,13 +12,12 @@ export default function Configuration() {
         <SectionHeading
           align="center"
           eyebrow="Configurations"
-          lead="1, 2 & 3 BHK homes made for"
+          lead="1, 2 & 3 BHK homes for"
           id="configuration-title"
-          title={<span className="italic">Every Stage</span>}
+          title={<span className="italic">Every Version Of Life</span>}
         />
         <p data-reveal className="mx-auto mt-6 max-w-2xl text-center leading-relaxed text-ink/70">
-          From your first home to a growing family&apos;s forever home — choose the layout that fits your life today, with room
-          for tomorrow.
+          Whether life is just taking shape or taking a new turn, choose the space that fits along the way.
         </p>
 
         <div className="mt-14 grid gap-6 lg:grid-cols-3">

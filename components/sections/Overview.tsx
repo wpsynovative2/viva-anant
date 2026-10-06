@@ -10,10 +10,10 @@ export default function Overview() {
       <div className="pointer-events-none absolute -right-40 top-10 h-[28rem] w-[28rem] rounded-full bg-blush-200/60 blur-3xl" aria-hidden="true" />
       <Container className="relative grid items-center gap-14 lg:grid-cols-[1.05fr_1fr] lg:gap-20">
         <div>
-          <SectionHeading eyebrow="Project Overview" lead="The dream of something beautiful taking" id="overview-title" title={<span className="italic">Shape</span>} />
+          <SectionHeading eyebrow="Project Overview" lead="Why" id="overview-title" title={<span className="italic">Viva Anant?</span>} />
 
-          <p data-reveal className="mt-8 inline-block rounded-full bg-plum-700 px-5 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-white">
-            A home has its own evolution
+          <p data-reveal className="mt-8 inline-block rounded-3xl bg-plum-700 px-5 py-2 text-xs font-semibold uppercase leading-relaxed tracking-[0.25em] text-white">
+            A home that grows, changes, and unfolds with every chapter of life
           </p>
           <div data-reveal className="font-serif mt-6 space-y-1 text-xl uppercase tracking-[0.12em] text-plum-800/90 sm:text-2xl">
             {evolutionLines.map((l) => (

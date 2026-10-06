@@ -2,6 +2,7 @@ import Image from "next/image";
 import EnquiryButton from "../EnquiryButton";
 import Icon from "../Icon";
 import { Container, Wave } from "../ui";
+import { heroPoints } from "@/lib/content";
 
 const quickFacts = [
   { k: "Configurations", v: "1, 2 & 3 BHK" },
@@ -39,11 +40,15 @@ export default function Hero() {
             Made for every stage of life
           </p>
           <h1 id="hero-title" className="mt-8 max-w-xl text-lg font-semibold leading-snug text-white sm:text-2xl" style={{ animation: "dialog-in 1s 0.45s both" }}>
-            Viva Anant — Premium 1, 2 &amp; 3 BHK Homes in Virar West
+            Step Into A Life Of Possibilities With 1, 2 &amp; 3 BHK Homes in Virar West
           </h1>
-          <p className="mt-4 max-w-lg text-base leading-relaxed text-white/80 sm:text-lg" style={{ animation: "dialog-in 1s 0.5s both" }}>
-            Step into a life of possibilities at <strong className="font-semibold text-white">Viva Anant</strong> — thoughtfully planned homes with wide balcony decks and a landscaped rooftop.
-          </p>
+          <ul className="mt-4 max-w-lg space-y-1.5 text-sm leading-relaxed text-white/80 sm:text-base" style={{ animation: "dialog-in 1s 0.5s both" }}>
+            {heroPoints.map((p) => (
+              <li key={p} className="flex gap-2.5">
+                <Icon name="check" className="mt-1 shrink-0 text-blush-300" /> {p}
+              </li>
+            ))}
+          </ul>
           <div className="mt-9 flex flex-wrap gap-3" style={{ animation: "dialog-in 1s 0.65s both" }}>
             <EnquiryButton source="Hero - Enquire" title="Get Exclusive Price Details" variant="blush">
               Enquire Now <Icon name="arrow" />

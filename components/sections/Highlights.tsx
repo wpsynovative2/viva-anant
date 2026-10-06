@@ -9,10 +9,10 @@ export default function Highlights() {
     <section id="highlights" aria-labelledby="highlights-title" className="relative overflow-hidden bg-cream py-20 sm:py-28">
       <Container>
         <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
-          <SectionHeading eyebrow="Project Highlights" lead="Homes that help life" id="highlights-title" title={<span className="italic">Evolve</span>} />
+          <SectionHeading eyebrow="Project Highlights" lead="A home that grows" id="highlights-title" title={<span className="italic">With Life</span>} />
           <p data-reveal className="max-w-md leading-relaxed text-ink/70">
-            Every detail at Viva Anant is planned around the way families actually live — light-filled rooms, generous balcony decks
-            and safety you never have to think about.
+            From the planning of each home to the spaces beyond it, Viva Anant brings together practical design, open-air living,
+            lifestyle amenities and thoughtful safety provisions.
           </p>
         </div>
 
@@ -68,11 +68,10 @@ export default function Highlights() {
       <Container className="mt-24 sm:mt-32">
         <div className="grid items-center gap-12 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
-            <SectionHeading eyebrow="Wide Balcony Decks" lead="Your home, with room for" title={<span className="italic">Balcony</span>} />
+            <SectionHeading eyebrow="Wide Balcony Decks" lead="Your home, with more room" title={<span className="italic">To Breathe</span>} />
             <p data-reveal className="mt-6 leading-relaxed text-ink/70">
-              Thoughtfully designed 1 BHK homes with a 5 ft balcony deck, and 2 &amp; 3 BHK homes with wide balcony decks in every
-              room — each with glass railings and provision for spotlights. Your own outdoor extension for sunrises, reading hours
-              and play.
+              Step outside into a little more openness, with wide balcony decks that bring fresh air, open views and a refreshing
+              pause to everyday life.
             </p>
           </div>
           <div className="grid grid-cols-3 gap-3 sm:gap-5">
@@ -94,7 +93,7 @@ export default function Highlights() {
       <Container className="mt-28 sm:mt-36">
         <div className="bg-bokeh rounded-[2.5rem] p-6 sm:p-12 lg:p-16">
           <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
-            <SectionHeading eyebrow="Specifications" lead="Features that evolve with you" title={<span className="italic">Home</span>} />
+            <SectionHeading eyebrow="Specifications" lead="Home features that" title={<span className="italic">Evolve With You</span>} />
             <EnquiryButton source="Specifications" title="Get Detailed Specifications" variant="outline" className="self-start lg:self-auto">
               <Icon name="download" /> Detailed Specifications
             </EnquiryButton>

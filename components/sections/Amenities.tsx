@@ -16,12 +16,13 @@ export default function Amenities() {
             <SectionHeading
               tone="dark"
               eyebrow="15+ Lifestyle Amenities"
-              lead="Amenities that let life take"
+              lead="Amenities that give every moment"
               id="amenities-title"
               title={<span className="italic">Wings</span>}
             />
             <p data-reveal className="max-w-md leading-relaxed text-white/70">
-              A landscaped rooftop designed for every age — play, fitness, calm and celebration, all a lift ride away.
+              From morning workouts and playful afternoons to quiet pauses and lively gatherings, every space adds a new way to
+              experience the day.
             </p>
           </div>
 

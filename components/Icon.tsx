@@ -82,6 +82,25 @@ const paths: Record<string, React.ReactNode> = {
       <path d="M3 6h18M16 10a4 4 0 0 1-8 0" />
     </>
   ),
+  food: <path d="M4 3v7a3 3 0 0 0 3 3v8M10 3v7a3 3 0 0 1-3 3M7 3v6M17 21V3c-2 1-3.5 3.5-3.5 7s1.5 4 3.5 4" />,
+  temple: (
+    <>
+      <path d="M12 2v3M8 10l4-5 4 5M5 10h14M6 10v11M18 10v11M3 21h18" />
+      <path d="M10 21v-5a2 2 0 0 1 4 0v5" />
+    </>
+  ),
+  beach: (
+    <>
+      <circle cx="17" cy="6" r="3" />
+      <path d="M2 17c2.5-1.5 4.5-1.5 7 0s4.5 1.5 7 0 4.5-1.5 6 0M2 21c2.5-1.5 4.5-1.5 7 0s4.5 1.5 7 0 4.5-1.5 6 0" />
+    </>
+  ),
+  users: (
+    <>
+      <circle cx="9" cy="8" r="3.5" />
+      <path d="M2 21a7 7 0 0 1 14 0M16 4.5a3.5 3.5 0 0 1 0 7M22 21a7 7 0 0 0-4-6.3" />
+    </>
+  ),
   expand: <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />,
   chevron: <path d="m6 9 6 6 6-6" />,
   rera: (

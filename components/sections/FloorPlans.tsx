@@ -18,9 +18,9 @@ export default function FloorPlans() {
       <div className="bg-bokeh relative pb-24 pt-10 sm:pb-32">
         <Container>
           <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
-            <SectionHeading eyebrow="Floor Plans" lead="Isometric views of" id="floor-plans-title" title={<span className="italic">Every Home</span>} />
+            <SectionHeading eyebrow="Floor Plans" lead="Isometric view of spaces with" id="floor-plans-title" title={<span className="italic">More To Offer</span>} />
             <p data-reveal className="max-w-md leading-relaxed text-ink/70">
-              Thoughtfully designed 1 BHK with a 5 ft balcony deck, and 2 &amp; 3 BHK homes with wide balcony decks in every room.
+              A closer look at spaces planned around the way life unfolds.
             </p>
           </div>
 

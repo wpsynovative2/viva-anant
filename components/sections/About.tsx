@@ -34,9 +34,9 @@ export default function About() {
           </div>
 
           <div className="order-1 lg:order-2">
-            <SectionHeading eyebrow="About the Project" lead="The start of something" id="about-title" title={<span className="italic">Limitless</span>} />
-            <p data-reveal className="mt-8 inline-block rounded-full bg-plum-800 px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white">
-              A life of possibilities with 1, 2 &amp; 3 BHK
+            <SectionHeading eyebrow="About the Project" lead="A beautiful evolution" id="about-title" title={<span className="italic">Begins Here</span>} />
+            <p data-reveal className="mt-8 inline-block rounded-3xl bg-plum-800 px-5 py-2 text-xs font-semibold uppercase leading-relaxed tracking-[0.2em] text-white">
+              Designed around the many chapters of everyday life
             </p>
             <ul className="mt-8 space-y-5">
               {aboutPoints.map((p, i) => (
@@ -72,8 +72,8 @@ export default function About() {
                   <span className="font-display mt-2 block text-5xl font-semibold italic sm:text-6xl">The Wings</span>
                 </h3>
                 <p className="mt-6 max-w-md leading-relaxed text-white/75">
-                  With over three decades of building trust across Vasai–Virar, Viva Group brings an experienced team and a proven
-                  track record of delivered homes to Viva Anant.
+                  Backed by decades of real estate experience and a strong record of delivered projects, Viva Group brings its
+                  expertise to every new chapter.
                 </p>
                 <EnquiryButton source="About - Developer" title="Talk to Our Sales Team" variant="blush" className="mt-8">
                   Talk to Us <Icon name="arrow" />
@@ -92,9 +92,6 @@ export default function About() {
                     </div>
                   ))}
                 </dl>
-                <p className="font-display mt-4 rounded-3xl border border-white/15 bg-white/5 p-6 text-center text-2xl text-white backdrop-blur-sm sm:text-3xl">
-                  Experienced Team
-                </p>
               </div>
             </div>
           </div>
