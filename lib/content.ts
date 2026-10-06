@@ -287,6 +287,7 @@ export const nearby = [
     places: ["McDonald's — 04 mins", "BBQ Nation — 02 mins", "Starbucks — 02 mins", "KFC — 02 mins", "Pizza Hut — 01 min"],
   },
   { group: "Connectivity", icon: "train", places: ["Virar Railway Station — 06 mins"] },
+  { group: "Healthcare", icon: "health", places: ["Global Hospital"] },
   {
     group: "Education",
     icon: "school",
@@ -310,7 +311,6 @@ export const nearby = [
     icon: "beach",
     places: ["Arnala Beach — 27 mins", "Navapur Beach — 26 mins", "Kalamb Beach — 33 mins", "Rajodi Beach — 28 mins"],
   },
-  { group: "Healthcare", icon: "health", places: ["Global Hospital"] },
 ] as const;
 
 export const infrastructure = [
