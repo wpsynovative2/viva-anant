@@ -70,8 +70,8 @@ export default function Highlights() {
           <div>
             <SectionHeading eyebrow="Wide Balcony Decks" lead="Your home, with more room" title={<span className="italic">To Breathe</span>} />
             <p data-reveal className="mt-6 leading-relaxed text-ink/70">
-              Step outside into a little more openness, with wide balcony decks that bring fresh air, open views and a refreshing
-              pause to everyday life.
+              Step outside into more openness with wide balcony decks that bring fresh air, open views, and a refreshing pause in
+              everyday life.
             </p>
           </div>
           <div className="grid grid-cols-3 gap-3 sm:gap-5">

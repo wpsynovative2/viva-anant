@@ -15,17 +15,22 @@ export default function Overview() {
           <p data-reveal className="mt-8 inline-block rounded-3xl bg-plum-700 px-5 py-2 text-xs font-semibold uppercase leading-relaxed tracking-[0.25em] text-white">
             A home that grows, changes, and unfolds with every chapter of life
           </p>
-          <div data-reveal className="font-serif mt-6 space-y-1 text-xl uppercase tracking-[0.12em] text-plum-800/90 sm:text-2xl">
-            {evolutionLines.map((l) => (
-              <p key={l}>{l}</p>
-            ))}
+          <div data-reveal className="mt-6 max-w-xl leading-relaxed text-ink/75">
+            <p>
+              As life transforms, home transforms with it. Life keeps evolving, and home evolves right along with it. Viva Anant
+              brings thoughtfully planned <strong className="text-plum-700">1, 2 &amp; 3 BHK homes in Virar West</strong> — designed
+              by Viva Group for every stage of life, with wide balcony decks, a grand entrance lobby and 15+ lifestyle amenities on
+              a landscaped rooftop.
+            </p>
+            <ul className="mt-4 grid gap-x-6 gap-y-2 sm:grid-cols-2">
+              {evolutionLines.map((l) => (
+                <li key={l} className="flex items-center gap-2.5">
+                  <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-plum-500" />
+                  {l}
+                </li>
+              ))}
+            </ul>
           </div>
-          <p data-reveal className="mt-6 max-w-xl leading-relaxed text-ink/75">
-            As life transforms, home transforms with it. Life keeps evolving, and home evolves right along with it. Viva Anant brings
-            thoughtfully planned <strong className="text-plum-700">1, 2 &amp; 3 BHK homes in Virar West</strong> — designed by Viva
-            Group for every stage of life, with wide balcony decks, a grand entrance lobby and 15+ lifestyle amenities on a
-            landscaped rooftop.
-          </p>
 
           <dl data-reveal className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-3xl bg-plum-200/70 sm:grid-cols-3">
             {overviewFacts.map((f) => (

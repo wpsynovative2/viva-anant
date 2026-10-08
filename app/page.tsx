@@ -4,6 +4,7 @@ import About from "@/components/sections/About";
 import Highlights from "@/components/sections/Highlights";
 import Amenities from "@/components/sections/Amenities";
 import Configuration from "@/components/sections/Configuration";
+import VirtualTour from "@/components/sections/VirtualTour";
 import FloorPlans from "@/components/sections/FloorPlans";
 import Connectivity from "@/components/sections/Connectivity";
 import Faq from "@/components/sections/Faq";
@@ -23,6 +24,7 @@ export default function Home() {
       <Highlights />
       <Amenities />
       <Configuration />
+      <VirtualTour />
       <FloorPlans />
       <Connectivity />
       <Faq />

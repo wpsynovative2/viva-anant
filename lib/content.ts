@@ -165,7 +165,7 @@ export const moreAmenities = [
   "Open Pantry",
 ];
 
-export type Room = { name: string; size: string };
+export type Room = { name: string; size: string; label?: string };
 
 export const configurations = [
   {
@@ -231,17 +231,33 @@ export const configurations = [
       "Well-Planned Common Bathroom",
     ],
     rooms: [
-      { name: "Living", size: `14'9" × 9'0"` },
-      { name: "Dining", size: `4'6" × 7'6"` },
-      { name: "Kitchen", size: `10'3" × 7'0"` },
-      { name: "Master Bedroom 1", size: `11'3" × 9'6"` },
-      { name: "Master Bedroom 2", size: `10'3" × 9'0"` },
-      { name: "Bedroom", size: `10'3" × 9'0"` },
-      { name: "Wardrobe Passage", size: `9'3" × 2'0"` },
-      { name: "Balcony Decks", size: `3'3" – 6'9" wide` },
+      { name: "Living", label: "Expansive Living Room", size: `14'9" × 9'0"` },
+      { name: "Dining", label: "Spacious Dining Area", size: `4'6" × 7'6"` },
+      { name: "Kitchen", label: "Generous Kitchen Space", size: `10'3" × 7'0"` },
+      { name: "Master Bedroom 1", label: "Luxurious Master Bedroom", size: `11'3" × 9'6"` },
+      { name: "Master Bedroom 2", label: "Spacious Master Bedroom", size: `10'3" × 9'0"` },
+      { name: "Bedroom", label: "Comfortable Bedroom", size: `10'3" × 9'0"` },
+      { name: "Wardrobe Passage", label: "Dedicated Wardrobe Space", size: `9'3" × 2'0"` },
+      { name: "Balcony Decks", label: "Wide Balcony Decks", size: `3'3" – 6'9" wide` },
     ] as Room[],
   },
 ];
+
+export const vrPoints = [
+  { title: "Explore The Layout", text: "Move through your home and understand the space at a glance." },
+  { title: "See It In Detail", text: "Get a closer look at the interiors and spatial planning." },
+  { title: "Experience The Flow", text: "Discover how the spaces connect and come together." },
+  { title: "Picture Your Life", text: "Visualise how your everyday life could take shape here." },
+  { title: "View From Within", text: "Experience the home from a more immersive perspective." },
+];
+
+// 360° tours are hosted by AT Real Studios and refuse iframing, so they open in a new tab.
+export const virtualTours = configurations.map((c) => ({
+  id: c.id,
+  type: c.type,
+  image: c.image,
+  href: `https://atrealstudios.in/Vivaanant/${c.id}`,
+}));
 
 export const floorPlans = [
   ...configurations.map((c) => ({ id: c.id, label: `${c.type} Isometric`, image: c.image, rooms: c.rooms, ratio: "wide" as const })),

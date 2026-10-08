@@ -21,7 +21,7 @@ export default function Footer() {
           <div>
             <Image src="/images/logo-viva-anant-white.webp" alt={`${site.name} logo`} width={1412} height={640} className="h-auto w-36" />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/65">
-              1, 2 &amp; 3 BHK homes, made for every stage of life — at Y K Nagar, Virar West.
+              1, 2 &amp; 3 BHK Homes, made for every stage of life
             </p>
             <div className="mt-6 flex items-center gap-3 text-xs uppercase tracking-[0.25em] text-white/50">
               A project by

@@ -73,7 +73,16 @@ export default function FloorPlans() {
               <dl className="mt-5 divide-y divide-plum-100">
                 {plan.rooms.map((r) => (
                   <div key={r.name} className="flex items-center justify-between gap-4 py-3 text-sm">
-                    <dt className="text-ink/70">{r.name}</dt>
+                    <dt className="text-ink/70">
+                      {r.label ? (
+                        <>
+                          <span className="block text-[10px] font-semibold uppercase tracking-[0.2em] text-plum-500">{r.name}</span>
+                          {r.label}
+                        </>
+                      ) : (
+                        r.name
+                      )}
+                    </dt>
                     <dd className="font-semibold text-plum-800">{r.size}</dd>
                   </div>
                 ))}
