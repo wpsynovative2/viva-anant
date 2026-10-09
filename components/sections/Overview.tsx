@@ -16,12 +16,12 @@ export default function Overview() {
             A home that grows, changes, and unfolds with every chapter of life
           </p>
           <div data-reveal className="mt-6 max-w-xl leading-relaxed text-ink/75">
-            <p>
+            {/* <p>
               As life transforms, home transforms with it. Life keeps evolving, and home evolves right along with it. Viva Anant
               brings thoughtfully planned <strong className="text-plum-700">1, 2 &amp; 3 BHK homes in Virar West</strong> — designed
-              by Viva Group for every stage of life, with wide balcony decks, a grand entrance lobby and 15+ lifestyle amenities on
+              by Viva Group for every stage of life, with wide balcony decks, a grand entrance lobby and 16+ lifestyle amenities on
               a landscaped rooftop.
-            </p>
+            </p> */}
             <ul className="mt-4 grid gap-x-6 gap-y-2 sm:grid-cols-2">
               {evolutionLines.map((l) => (
                 <li key={l} className="flex items-center gap-2.5">
@@ -72,7 +72,7 @@ export default function Overview() {
             />
           </div>
           <div className="absolute -right-2 top-8 rounded-2xl bg-white/90 px-5 py-4 shadow-xl backdrop-blur sm:-right-6">
-            <p className="font-display text-3xl text-plum-700">15+</p>
+            <p className="font-display text-3xl text-plum-700">16+</p>
             <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-ink/60">Lifestyle amenities</p>
           </div>
         </div>

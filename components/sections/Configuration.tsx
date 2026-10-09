@@ -20,7 +20,7 @@ export default function Configuration() {
           Whether life is just taking shape or taking a new turn, choose the space that fits along the way.
         </p>
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-3">
+        <div className="mt-14 grid items-start gap-6 lg:grid-cols-3">
           {configurations.map((c, i) => (
             <article
               key={c.id}

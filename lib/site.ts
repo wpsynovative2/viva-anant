@@ -6,9 +6,9 @@ export const site = {
   developer: "Viva Group",
   tagline: "1, 2 & 3 BHK Homes, Made for Every Stage of Life",
   url: (process.env.NEXT_PUBLIC_SITE_URL || "https://www.vivaanant.in").replace(/\/$/, ""),
-  phoneDisplay: "+91 91588 22478",
-  phoneE164: "+919158822478",
-  whatsapp: "919158822478",
+  phoneDisplay: "+91 80950 50929",
+  phoneE164: "+918095050929",
+  whatsapp: "918095050929",
   rera: "PM1240002600876",
   reraUrl: "https://maharera.maharashtra.gov.in/",
   address: {
@@ -22,7 +22,7 @@ export const site = {
   addressLine: "Y K Nagar NX Rd, Virar (West), Vasai-Virar, 401303, Maharashtra",
   mapsQuery: "Y K Nagar, Virar West, Vasai-Virar, Maharashtra 401303",
   description:
-    "Viva Anant by Viva Group — premium 1, 2 & 3 BHK flats in Y K Nagar, Virar West. 15+ rooftop lifestyle amenities, wide balcony decks, grand entrance lobby and easy access to Virar station. MahaRERA No. PM1240002600876.",
+    "Viva Anant by Viva Group — premium 1, 2 & 3 BHK flats in Y K Nagar NX, Virar West. 16+ rooftop lifestyle amenities, wide balcony decks, grand entrance lobby and easy access to Virar station. MahaRERA No. PM1240002600876.",
   keywords: [
     "Viva Anant",
     "Viva Anant Virar",
@@ -32,6 +32,7 @@ export const site = {
     "3 BHK flats in Virar West",
     "new projects in Virar West",
     "flats near Virar station",
+    "Y K Nagar NX Virar",
     "Y K Nagar Virar",
     "residential projects Vasai-Virar",
     "MahaRERA PM1240002600876",

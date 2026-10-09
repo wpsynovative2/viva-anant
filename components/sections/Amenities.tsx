@@ -15,7 +15,7 @@ export default function Amenities() {
           <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
             <SectionHeading
               tone="dark"
-              eyebrow="15+ Lifestyle Amenities"
+              eyebrow="16+ Lifestyle Amenities"
               lead="Amenities that give every moment"
               id="amenities-title"
               title={<span className="italic">Wings</span>}

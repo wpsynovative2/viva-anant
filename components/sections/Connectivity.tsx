@@ -33,10 +33,10 @@ export default function Connectivity() {
               data-reveal
               className="relative overflow-hidden rounded-[2.5rem] py-5 border-8 border-white bg-white shadow-xl shadow-plum-900/10"
             >
-              <div className="relative aspect-square">
+              <div className="relative aspect-[1800/2423]">
                 <Image
-                  src="/images/location-map.webp"
-                  alt="Location map of Viva Anant, Y K Nagar, Virar West, showing nearby schools, hospital, shopping and Virar station"
+                  src="/images/location-map-artboard.webp"
+                  alt="Location map of Viva Anant, Y K Nagar NX, Virar West, showing nearby schools, hospital, shopping and Virar station"
                   fill
                   sizes="(min-width: 1024px) 45vw, 95vw"
                   className="object-cover rounded-[1.25rem]"

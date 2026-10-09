@@ -115,7 +115,7 @@ function sendAutoReply(d) {
     '<div style="padding:24px;border:1px solid #eee;border-top:0;border-radius:0 0 12px 12px">' +
     "<p>Dear " + escapeHtml(d.name) + ",</p>" +
     "<p>Thank you for your interest in <b>Viva Anant</b>. Our relationship manager will call you shortly with the price sheet, brochure and floor plans.</p>" +
-    '<p>Need us sooner? Call <a href="tel:+919158822478">+91 91588 22478</a>.</p>' +
+    '<p>Need us sooner? Call <a href="tel:+918095050929">+91 80950 50929</a>.</p>' +
     '<p style="font-size:11px;color:#888">MahaRERA Reg. No. PM1240002600876 · Y K Nagar NX Rd, Virar (West), Vasai-Virar 401303</p></div></div>';
   MailApp.sendEmail({ to: d.email, subject: "Thank you for your interest in Viva Anant", htmlBody: html, name: "Viva Anant" });
 }

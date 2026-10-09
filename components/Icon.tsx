@@ -101,6 +101,39 @@ const paths: Record<string, React.ReactNode> = {
       <path d="M2 21a7 7 0 0 1 14 0M16 4.5a3.5 3.5 0 0 1 0 7M22 21a7 7 0 0 0-4-6.3" />
     </>
   ),
+  window: (
+    <>
+      <rect x="3" y="3" width="18" height="18" rx="1" />
+      <path d="M12 3v18M3 12h18M8 8.5a4 4 0 0 1 8 0" />
+    </>
+  ),
+  airflow: <path d="M3 8h11a3 3 0 1 0-3-3M3 12h16a3 3 0 1 1-3 3M3 16h8a2.5 2.5 0 1 1-2.5 2.5" />,
+  kitchen: (
+    <>
+      <rect x="3" y="3" width="18" height="6" rx="1" />
+      <rect x="3" y="12" width="18" height="9" rx="1" />
+      <path d="M12 12v9M7 6h.01M12 6h.01M17 6h.01M9.5 16v1M14.5 16v1" />
+    </>
+  ),
+  sofa: (
+    <>
+      <path d="M5 11V8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3" />
+      <path d="M3 13a2 2 0 0 1 4 0v2h10v-2a2 2 0 0 1 4 0v4H3ZM5 17v2M19 17v2" />
+    </>
+  ),
+  bed: <path d="M3 19V6M21 19v-6a3 3 0 0 0-3-3H3M3 15h18M6 10V8.5A1.5 1.5 0 0 1 7.5 7h3A1.5 1.5 0 0 1 12 8.5V10" />,
+  bath: (
+    <>
+      <path d="M3 12h18v2a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5ZM7 19l-1 2M17 19l1 2" />
+      <path d="M6 12V5a2 2 0 0 1 4 0M9 7h2" />
+    </>
+  ),
+  layout: (
+    <>
+      <rect x="3" y="3" width="18" height="18" rx="1" />
+      <path d="M3 10h8V3M11 21v-6h10M15 10h6" />
+    </>
+  ),
   expand: <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />,
   chevron: <path d="m6 9 6 6 6-6" />,
   rera: (

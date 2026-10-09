@@ -1,6 +1,6 @@
 # Viva Anant — Landing Page
 
-The landing page for **Viva Anant** (Viva Group), a project with 1, 2 & 3 BHK homes at Y K Nagar, Virar West. It uses Next.js 16 (App Router), TypeScript and Tailwind CSS v4. Leads go to a Google Sheet and are emailed to the sales team through Google Apps Script. reCAPTCHA v3 protects the form.
+The landing page for **Viva Anant** (Viva Group), a project with 1, 2 & 3 BHK homes at Y K Nagar NX, Virar West. It uses Next.js 16 (App Router), TypeScript and Tailwind CSS v4. Leads go to a Google Sheet and are emailed to the sales team through Google Apps Script. reCAPTCHA v3 protects the form.
 
 ## Run locally
 

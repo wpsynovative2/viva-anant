@@ -4,8 +4,8 @@ export const img = (name: string) => `/images/${name}.webp`;
 
 export const overviewFacts = [
   { label: "Configurations", value: "1, 2 & 3 BHK" },
-  { label: "Location", value: "Y K Nagar, Virar (W)" },
-  { label: "Lifestyle Amenities", value: "15+" },
+  { label: "Location", value: "Y K Nagar NX, Virar (W)" },
+  { label: "Lifestyle Amenities", value: "16+" },
   { label: "Amenity Deck", value: "Rooftop" },
   { label: "Developer", value: "Viva Group" },
   { label: "MahaRERA No.", value: "PM1240002600876" },
@@ -13,7 +13,7 @@ export const overviewFacts = [
 
 export const heroPoints = [
   "Modern architecture, planned smartly for the way you live",
-  "15+ lifestyle amenities, with something for every age and interest",
+  "16+ lifestyle amenities, with something for every age and interest",
   "Wide balconies that give your home a dedicated outdoor extension",
   "Easy connectivity to the railway station, highways, and the places you visit every day",
 ];
@@ -27,11 +27,26 @@ export const evolutionLines = [
 ];
 
 export const aboutPoints = [
-  { title: "Intelligent Planning", text: "Well-considered spaces that adapt to everyday needs." },
-  { title: "Emerging Address", text: "Positioned in a developing part of Virar West." },
-  { title: "Evolving Layouts", text: "Efficient spaces planned around everyday needs." },
-  { title: "Rooftop Amenities", text: "Open-air spaces for recreation and relaxation." },
-  { title: "Community Living", text: "A thoughtfully planned environment for everyday interaction." },
+  {
+    title: "Intelligent Planning",
+    text: "Well-considered spaces that adapt to everyday needs.",
+  },
+  {
+    title: "Emerging Address",
+    text: "Positioned in a developing part of Virar West.",
+  },
+  {
+    title: "Evolving Layouts",
+    text: "Efficient spaces planned around everyday needs.",
+  },
+  {
+    title: "Rooftop Amenities",
+    text: "Open-air spaces for recreation and relaxation.",
+  },
+  {
+    title: "Community Living",
+    text: "A thoughtfully planned environment for everyday interaction.",
+  },
 ];
 
 export const legacyStats = [
@@ -42,14 +57,46 @@ export const legacyStats = [
 ];
 
 export const highlights = [
-  { icon: "sparkle", title: "Sky Deck Amenities", text: "Rooftop spaces designed for recreation, relaxation and open-air living." },
-  { icon: "balcony", title: "Private Balcony Decks", text: "A 5 FT private deck that extends your living space outdoors." },
-  { icon: "building", title: "Efficient Home Planning", text: "Well-planned layouts created around comfortable everyday living." },
-  { icon: "store", title: "Everyday Essentials", text: "Schools, shopping, dining and daily conveniences close to home." },
-  { icon: "users", title: "Designed For Every Age", text: "A lifestyle environment with spaces catering to different interests." },
-  { icon: "shield", title: "Secure By Design", text: "CCTV surveillance, 24×7 security and visitor management add everyday reassurance." },
-  { icon: "bolt", title: "Generator Backup", text: "Power backup for every apartment, so life never pauses." },
-  { icon: "train", title: "Close to Virar Station", text: "Easy access to the railway station, highways and daily needs." },
+  {
+    icon: "sparkle",
+    title: "Sky Deck Amenities",
+    text: "Rooftop spaces designed for recreation, relaxation and open-air living.",
+  },
+  {
+    icon: "balcony",
+    title: "Private Balcony Decks",
+    text: "A 5 FT private deck that extends your living space outdoors.",
+  },
+  {
+    icon: "building",
+    title: "Efficient Home Planning",
+    text: "Well-planned layouts created around comfortable everyday living.",
+  },
+  {
+    icon: "store",
+    title: "Everyday Essentials",
+    text: "Schools, shopping, dining and daily conveniences close to home.",
+  },
+  {
+    icon: "users",
+    title: "Designed For Every Age",
+    text: "A lifestyle environment with spaces catering to different interests.",
+  },
+  {
+    icon: "shield",
+    title: "Secure By Design",
+    text: "CCTV surveillance, 24×7 security and visitor management add everyday reassurance.",
+  },
+  {
+    icon: "bolt",
+    title: "Generator Backup",
+    text: "Power backup for every apartment, so life never pauses.",
+  },
+  {
+    icon: "train",
+    title: "Prime Location",
+    text: "Easy access to the railway station, highways and daily needs.",
+  },
 ] as const;
 
 export const lifestyle = [
@@ -80,9 +127,18 @@ export const lifestyle = [
 ];
 
 export const balconyImages = [
-  { image: img("balcony-father-daughter-play"), alt: "Father and daughter playing on a wide balcony deck at Viva Anant" },
-  { image: img("balcony-couple-sunrise"), alt: "Couple enjoying the sunrise from a Viva Anant balcony" },
-  { image: img("balcony-woman-reading"), alt: "Woman reading on a glass-railed balcony at Viva Anant" },
+  {
+    image: img("balcony-father-daughter-play"),
+    alt: "Father and daughter playing on a wide balcony deck at Viva Anant",
+  },
+  {
+    image: img("balcony-couple-sunrise"),
+    alt: "Couple enjoying the sunrise from a Viva Anant balcony",
+  },
+  {
+    image: img("balcony-woman-reading"),
+    alt: "Woman reading on a glass-railed balcony at Viva Anant",
+  },
 ];
 
 export const specifications = [
@@ -144,11 +200,31 @@ export const specifications = [
 ];
 
 export const amenities = [
-  { image: img("amenity-box-cricket"), title: "Box Cricket Arena", text: "Where every match brings out a little more spirit." },
-  { image: img("amenity-jogging-track"), title: "Fitness Track", text: "A better way to keep your day moving." },
-  { image: img("amenity-kids-play-area"), title: "Kids' Play Area", text: "Little feet, big adventures, endless play." },
-  { image: img("amenity-open-gym"), title: "Open-Air Gym", text: "Step out, work out, feel the difference." },
-  { image: img("amenity-senior-citizen-sitting-area"), title: "Senior Citizen Corner", text: "A relaxed corner for conversations that matter." },
+  {
+    image: img("amenity-box-cricket"),
+    title: "Box Cricket Arena",
+    text: "Where every match brings out a little more spirit.",
+  },
+  {
+    image: img("amenity-jogging-track"),
+    title: "Fitness Track",
+    text: "A better way to keep your day moving.",
+  },
+  {
+    image: img("amenity-kids-play-area"),
+    title: "Kids' Play Area",
+    text: "Little feet, big adventures, endless play.",
+  },
+  {
+    image: img("amenity-open-gym"),
+    title: "Open-Air Gym",
+    text: "Step out, work out, feel the difference.",
+  },
+  {
+    image: img("amenity-senior-citizen-sitting-area"),
+    title: "Senior Citizen Corner",
+    text: "A relaxed corner for conversations that matter.",
+  },
 ];
 
 export const moreAmenities = [
@@ -233,22 +309,67 @@ export const configurations = [
     rooms: [
       { name: "Living", label: "Expansive Living Room", size: `14'9" × 9'0"` },
       { name: "Dining", label: "Spacious Dining Area", size: `4'6" × 7'6"` },
-      { name: "Kitchen", label: "Generous Kitchen Space", size: `10'3" × 7'0"` },
-      { name: "Master Bedroom 1", label: "Luxurious Master Bedroom", size: `11'3" × 9'6"` },
-      { name: "Master Bedroom 2", label: "Spacious Master Bedroom", size: `10'3" × 9'0"` },
+      {
+        name: "Kitchen",
+        label: "Generous Kitchen Space",
+        size: `10'3" × 7'0"`,
+      },
+      {
+        name: "Master Bedroom 1",
+        label: "Luxurious Master Bedroom",
+        size: `11'3" × 9'6"`,
+      },
+      {
+        name: "Master Bedroom 2",
+        label: "Spacious Master Bedroom",
+        size: `10'3" × 9'0"`,
+      },
       { name: "Bedroom", label: "Comfortable Bedroom", size: `10'3" × 9'0"` },
-      { name: "Wardrobe Passage", label: "Dedicated Wardrobe Space", size: `9'3" × 2'0"` },
-      { name: "Balcony Decks", label: "Wide Balcony Decks", size: `3'3" – 6'9" wide` },
+      {
+        name: "Wardrobe Passage",
+        label: "Dedicated Wardrobe Space",
+        size: `9'3" × 2'0"`,
+      },
+      {
+        name: "Balcony Decks",
+        label: "Wide Balcony Decks",
+        size: `3'3" – 6'9" wide`,
+      },
     ] as Room[],
   },
 ];
 
+export const homeDetails = [
+  { icon: "window", text: "Bright & Airy Interiors" },
+  { icon: "airflow", text: "Well-Ventilated Spaces" },
+  { icon: "kitchen", text: "A Private Kitchen Space" },
+  { icon: "sofa", text: "Generous Living Area" },
+  { icon: "bed", text: "Comfortable Master Bedroom" },
+  { icon: "bath", text: "2 & 3 Thoughtfully Planned Bathrooms" },
+  { icon: "layout", text: "Practical Home Layout" },
+];
+
 export const vrPoints = [
-  { title: "Explore The Layout", text: "Move through your home and understand the space at a glance." },
-  { title: "See It In Detail", text: "Get a closer look at the interiors and spatial planning." },
-  { title: "Experience The Flow", text: "Discover how the spaces connect and come together." },
-  { title: "Picture Your Life", text: "Visualise how your everyday life could take shape here." },
-  { title: "View From Within", text: "Experience the home from a more immersive perspective." },
+  {
+    title: "Explore The Layout",
+    text: "Move through your home and understand the space at a glance.",
+  },
+  {
+    title: "See It In Detail",
+    text: "Get a closer look at the interiors and spatial planning.",
+  },
+  {
+    title: "Experience The Flow",
+    text: "Discover how the spaces connect and come together.",
+  },
+  {
+    title: "Picture Your Life",
+    text: "Visualise how your everyday life could take shape here.",
+  },
+  {
+    title: "View From Within",
+    text: "Experience the home from a more immersive perspective.",
+  },
 ];
 
 // 360° tours are hosted by AT Real Studios and refuse iframing, so they open in a new tab.
@@ -260,7 +381,13 @@ export const virtualTours = configurations.map((c) => ({
 }));
 
 export const floorPlans = [
-  ...configurations.map((c) => ({ id: c.id, label: `${c.type} Isometric`, image: c.image, rooms: c.rooms, ratio: "wide" as const })),
+  ...configurations.map((c) => ({
+    id: c.id,
+    label: `${c.type} Isometric`,
+    image: c.image,
+    rooms: c.rooms,
+    ratio: "wide" as const,
+  })),
   {
     id: "typical",
     label: "Typical Floor Plan",
@@ -300,9 +427,19 @@ export const nearby = [
   {
     group: "Food & Dining",
     icon: "food",
-    places: ["McDonald's — 04 mins", "BBQ Nation — 02 mins", "Starbucks — 02 mins", "KFC — 02 mins", "Pizza Hut — 01 min"],
+    places: [
+      "McDonald's — 04 mins",
+      "BBQ Nation — 02 mins",
+      "Starbucks — 02 mins",
+      "KFC — 02 mins",
+      "Pizza Hut — 01 min",
+    ],
   },
-  { group: "Connectivity", icon: "train", places: ["Virar Railway Station — 06 mins"] },
+  {
+    group: "Connectivity",
+    icon: "train",
+    places: ["Virar Railway Station — 06 mins"],
+  },
   { group: "Healthcare", icon: "health", places: ["Global Hospital"] },
   {
     group: "Education",
@@ -320,31 +457,88 @@ export const nearby = [
   {
     group: "Spiritual Destinations",
     icon: "temple",
-    places: ["Jain Temple — 02 mins", "Siddhivinayak Temple — 08 mins", "Dwarkadish Temple — 20 mins"],
+    places: [
+      "Jain Temple — 02 mins",
+      "Siddhivinayak Temple — 08 mins",
+      "Dwarkadish Temple — 20 mins",
+    ],
   },
   {
     group: "Weekend Escapes",
     icon: "beach",
-    places: ["Arnala Beach — 27 mins", "Navapur Beach — 26 mins", "Kalamb Beach — 33 mins", "Rajodi Beach — 28 mins"],
+    places: [
+      "Arnala Beach — 27 mins",
+      "Navapur Beach — 26 mins",
+      "Kalamb Beach — 33 mins",
+      "Rajodi Beach — 28 mins",
+    ],
   },
 ] as const;
 
 export const infrastructure = [
-  { image: img("infra-bullet-train"), title: "Virar–Ahmedabad Bullet Train", text: "High-speed rail connectivity." },
-  { image: img("infra-coastal-road"), title: "Virar–Versova Coastal Road", text: "Enhanced Mumbai connectivity & faster commutes." },
-  { image: img("infra-virar-delhi-expressway"), title: "Virar–Delhi Expressway", text: "Stronger Mumbai–Delhi connectivity." },
-  { image: img("infra-metro"), title: "Virar–Bhayandar Metro Line 13", text: "Seamless urban connectivity across Mumbai." },
-  { image: img("infra-airport"), title: "Mumbai's 3rd Proposed International Airport", text: "Proposed at Kore Beach, near Virar." },
-  { image: img("infra-dahanu-railway"), title: "Virar–Dahanu Railway Line", text: "Strengthening connectivity & regional development." },
-  { image: img("infra-vadhavan-port"), title: "Vadhavan Port", text: "One of Asia's largest ports." },
-  { image: img("infra-urban-transit-corridor"), title: "Virar–Alibaug Multimodal Corridor", text: "Strengthening regional connectivity & accessibility." },
+  {
+    image: img("infra-bullet-train"),
+    title: "Virar–Ahmedabad Bullet Train",
+    text: "High-speed rail connectivity.",
+  },
+  {
+    image: img("infra-coastal-road"),
+    title: "Virar–Versova Coastal Road",
+    text: "Enhanced Mumbai connectivity & faster commutes.",
+  },
+  {
+    image: img("infra-virar-delhi-expressway"),
+    title: "Virar–Delhi Expressway",
+    text: "Stronger Mumbai–Delhi connectivity.",
+  },
+  {
+    image: img("infra-metro"),
+    title: "Virar–Bhayandar Metro Line 13",
+    text: "Seamless urban connectivity across Mumbai.",
+  },
+  {
+    image: img("infra-airport"),
+    title: "Mumbai's 3rd Proposed International Airport",
+    text: "Proposed at Kore Beach, near Virar.",
+  },
+  {
+    image: img("infra-dahanu-railway"),
+    title: "Virar–Dahanu Railway Line",
+    text: "Strengthening connectivity & regional development.",
+  },
+  {
+    image: img("infra-vadhavan-port"),
+    title: "Vadhavan Port",
+    text: "One of Asia's largest ports.",
+  },
+  {
+    image: img("infra-urban-transit-corridor"),
+    title: "Virar–Alibaug Multimodal Corridor",
+    text: "Strengthening regional connectivity & accessibility.",
+  },
 ];
 
 export const investReasons = [
-  { image: img("infra-enhanced-connectivity"), title: "Enhanced Connectivity", text: "Faster & seamless travel." },
-  { image: img("infra-economic-growth"), title: "Economic Growth", text: "Boost to real estate & business." },
-  { image: img("infra-better-infrastructure"), title: "Better Infrastructure", text: "Modern, efficient & future-ready." },
-  { image: img("balcony-couple-sunrise"), title: "Higher Quality of Life", text: "Better access, better living." },
+  {
+    image: img("infra-enhanced-connectivity"),
+    title: "Enhanced Connectivity",
+    text: "Faster & seamless travel.",
+  },
+  {
+    image: img("infra-economic-growth"),
+    title: "Economic Growth",
+    text: "Boost to real estate & business.",
+  },
+  {
+    image: img("infra-better-infrastructure"),
+    title: "Better Infrastructure",
+    text: "Modern, efficient & future-ready.",
+  },
+  {
+    image: img("balcony-couple-sunrise"),
+    title: "Higher Quality of Life",
+    text: "Better access, better living.",
+  },
 ];
 
 export const faqs = [
@@ -362,7 +556,7 @@ export const faqs = [
   },
   {
     q: "What amenities does Viva Anant offer?",
-    a: "Viva Anant offers 15+ lifestyle amenities on a landscaped rooftop, including a box cricket turf, jogging pathway, open-air gym, kids' play area, senior citizens' seating, pergola alcoves and lawn lounges, along with a grand entrance lobby.",
+    a: "Viva Anant offers 16+ lifestyle amenities on a landscaped rooftop, including a box cricket turf, jogging pathway, open-air gym, kids' play area, senior citizens' seating, pergola alcoves and lawn lounges, along with a grand entrance lobby.",
   },
   {
     q: "Who is the developer of Viva Anant?",
@@ -370,6 +564,6 @@ export const faqs = [
   },
   {
     q: "How can I get the price and brochure for Viva Anant?",
-    a: "Click any 'Enquire Now' or 'Download Brochure' button, or call +91 91588 22478. Our relationship manager will share the price sheet, brochure and arrange a site visit.",
+    a: "Click any 'Enquire Now' or 'Download Brochure' button, or call +91 80950 50929. Our relationship manager will share the price sheet, brochure and arrange a site visit.",
   },
 ];

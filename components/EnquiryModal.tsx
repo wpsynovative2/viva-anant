@@ -81,7 +81,7 @@ export default function EnquiryModal() {
             <Image src="/images/logo-viva-anant-white.webp" alt={site.name} width={140} height={64} className="h-auto w-32" />
           </div>
           <div className="relative space-y-3">
-            {["1, 2 & 3 BHK Homes", "15+ Rooftop Amenities", "Near Virar Station", "Site Visit Assistance"].map((t) => (
+            {["1, 2 & 3 BHK Homes", "16+ Rooftop Amenities", "Near Virar Station", "Site Visit Assistance"].map((t) => (
               <p key={t} className="flex items-center gap-3 text-sm">
                 <span className="grid h-6 w-6 place-items-center rounded-full bg-blush-300 text-plum-900">
                   <Icon name="check" className="text-xs" />

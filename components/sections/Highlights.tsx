@@ -54,10 +54,10 @@ export default function Highlights() {
                   className="object-cover transition duration-[1.4s] group-hover:scale-105"
                 />
               </div>
-              <figcaption className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-plum-950/80 via-plum-950/10 via-40% to-transparent p-6 text-white sm:p-10">
+              <figcaption className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-plum-950/95 via-plum-950/60 via-55% to-transparent p-6 text-white [text-shadow:0_2px_12px_rgba(10,4,40,0.6)] sm:p-10">
                 <span className="eyebrow self-start rounded-full bg-plum-950/55 px-3 py-1.5 text-blush-200 backdrop-blur-sm">{l.eyebrow}</span>
-                <span className="font-display mt-2 text-4xl italic">{l.title}</span>
-                <span className="mt-2 max-w-md text-sm text-white/80 sm:text-base">{l.text}</span>
+                <span className={`font-display mt-2 italic leading-tight ${i === 0 ? "text-4xl sm:text-5xl" : "text-3xl"}`}>{l.title}</span>
+                <span className="mt-2 max-w-md text-sm text-white/90 sm:text-base">{l.text}</span>
               </figcaption>
             </figure>
           ))}

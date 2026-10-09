@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const steps = [
   { title: "We call you", text: "Our relationship manager will reach out shortly." },
   { title: "Get the details", text: "Receive the price sheet, e-brochure & floor plans." },
-  { title: "Visit the site", text: "Experience Viva Anant in person at Y K Nagar, Virar West." },
+  { title: "Visit the site", text: "Experience Viva Anant in person at Y K Nagar NX, Virar West." },
 ];
 
 export default async function ThankYouPage({ searchParams }: PageProps<"/thank-you">) {
