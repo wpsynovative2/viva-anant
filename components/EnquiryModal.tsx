@@ -109,7 +109,7 @@ export default function EnquiryModal() {
           <p className="mb-6 mt-2 text-sm text-ink/65">
             Share your details and our relationship manager will call you back shortly.
           </p>
-          <EnquiryForm key={openCount} source={detail.source} compact />
+          <EnquiryForm key={openCount} source={detail.source} tour={detail.tour} compact />
         </div>
       </div>
     </dialog>

@@ -70,6 +70,21 @@ export default function FloorPlans() {
 
             <div className="flex flex-col">
               <h3 className="font-display text-3xl text-plum-800">{plan.label}</h3>
+              {"showHomeDetails" in plan ? (
+                <>
+                  <p className="eyebrow mt-2 text-plum-500">The details that make a home complete</p>
+                  <ul className="mt-5 grid gap-3 sm:grid-cols-2">
+                    {homeDetails.map((d) => (
+                      <li key={d.text} className="flex items-center gap-3 text-sm font-medium text-ink/80">
+                        <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-plum-50 text-2xl text-plum-700">
+                          <Icon name={d.icon} strokeWidth={1.4} />
+                        </span>
+                        {d.text}
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              ) : (
               <dl className="mt-5 divide-y divide-plum-100">
                 {plan.rooms.map((r) => (
                   <div key={r.name} className="flex items-center justify-between gap-4 py-3 text-sm">
@@ -87,6 +102,7 @@ export default function FloorPlans() {
                   </div>
                 ))}
               </dl>
+              )}
               <p className="mt-4 text-[11px] leading-relaxed text-ink/50">
                 Plan shown for representation only. Refer to approved plans for actual dimensions and carpet area.
               </p>
@@ -101,23 +117,6 @@ export default function FloorPlans() {
             </div>
           </div>
 
-          {/* Specifications common to every configuration */}
-          <div data-reveal className="bg-brand-gradient mt-8 overflow-hidden rounded-[2.5rem] p-6 text-white shadow-xl shadow-plum-900/20 sm:p-10">
-            <div className="text-center">
-              <h3 className="font-display text-3xl sm:text-4xl">1 BHK, 2 BHK &amp; 3 BHK</h3>
-              <p className="eyebrow mt-3 text-blush-300">The details that make a home complete</p>
-            </div>
-            <ul className="mt-8 grid grid-cols-2 gap-x-4 gap-y-8 border-t border-white/15 pt-8 sm:grid-cols-4 lg:grid-cols-7">
-              {homeDetails.map((d) => (
-                <li key={d.text} className="flex flex-col items-center gap-3 text-center">
-                  <span className="grid h-14 w-14 place-items-center rounded-2xl border border-white/20 bg-white/5 text-3xl">
-                    <Icon name={d.icon} strokeWidth={1.3} />
-                  </span>
-                  <span className="text-xs font-medium uppercase leading-relaxed tracking-[0.15em] text-white/85">{d.text}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
         </Container>
       </div>
       <Wave fill="var(--color-cream)" className="-mt-px bg-[#f1e6fb]" />

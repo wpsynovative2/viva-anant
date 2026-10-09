@@ -4,7 +4,25 @@ import type { ReactNode } from "react";
 
 export const ENQUIRE_EVENT = "va:enquire";
 
-export type EnquireDetail = { source: string; title?: string };
+// `tour` is a virtual-tour id; after a successful submit the thank-you page offers that tour.
+export type EnquireDetail = { source: string; title?: string; tour?: string };
+
+const SUBMITTED_KEY = "va-submitted";
+
+/** True once this browser has sent an enquiry (persists across visits). */
+export function hasSubmittedEnquiry() {
+  try {
+    return localStorage.getItem(SUBMITTED_KEY) === "1" || !!sessionStorage.getItem("va-lead");
+  } catch {
+    return false;
+  }
+}
+
+export function markEnquirySubmitted() {
+  try {
+    localStorage.setItem(SUBMITTED_KEY, "1");
+  } catch {}
+}
 
 export function openEnquiry(detail: EnquireDetail) {
   window.dispatchEvent(new CustomEvent<EnquireDetail>(ENQUIRE_EVENT, { detail }));

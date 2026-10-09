@@ -4,6 +4,7 @@ import { useId, useState, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import Loader from "./Loader";
 import Icon from "./Icon";
+import { markEnquirySubmitted } from "./EnquiryButton";
 import {
   CONFIG_OPTIONS,
   normalizeIndianMobile,
@@ -60,8 +61,10 @@ export default function EnquiryForm({
   source,
   tone = "light",
   compact = false,
+  tour,
 }: {
   source: string;
+  tour?: string;
   tone?: "light" | "dark";
   compact?: boolean;
 }) {
@@ -117,7 +120,10 @@ export default function EnquiryForm({
       try {
         sessionStorage.setItem("va-lead", "1");
       } catch {}
-      router.push(`/thank-you?name=${encodeURIComponent(payload.name.split(" ")[0])}`);
+      markEnquirySubmitted();
+      const query = new URLSearchParams({ name: payload.name.split(" ")[0] });
+      if (tour) query.set("tour", tour);
+      router.push(`/thank-you?${query}`);
     } catch (err) {
       setErrors({ form: err instanceof Error ? err.message : "Something went wrong. Please try again." });
       setSubmitting(false);

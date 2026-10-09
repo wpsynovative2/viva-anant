@@ -386,6 +386,7 @@ export const floorPlans = [
     label: `${c.type} Isometric`,
     image: c.image,
     rooms: c.rooms,
+    showHomeDetails: true,
     ratio: "wide" as const,
   })),
   {

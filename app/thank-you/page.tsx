@@ -5,6 +5,7 @@ import Icon from "@/components/Icon";
 import { Butterfly, Swash } from "@/components/ui";
 import ConversionPing from "./ConversionPing";
 import { site, telHref, whatsappHref } from "@/lib/site";
+import { virtualTours } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Thank You",
@@ -20,7 +21,9 @@ const steps = [
 ];
 
 export default async function ThankYouPage({ searchParams }: PageProps<"/thank-you">) {
-  const { name } = await searchParams;
+  const { name, tour: tourId } = await searchParams;
+  // Only known tour ids are honoured, so the link can't be pointed elsewhere.
+  const tour = virtualTours.find((t) => t.id === tourId);
   const first = typeof name === "string" ? name.replace(/[^\p{L} .'-]/gu, "").slice(0, 30) : "";
 
   return (
@@ -45,6 +48,29 @@ export default async function ThankYouPage({ searchParams }: PageProps<"/thank-y
           We&apos;ve received your enquiry for <strong className="text-white">{site.name}</strong>. Our team will get in touch with you
           shortly with everything you need.
         </p>
+
+        {tour && (
+          <div
+            className="mx-auto mt-10 flex max-w-xl flex-col items-center gap-5 rounded-[2rem] border border-blush-300/40 bg-white/10 p-6 backdrop-blur sm:flex-row sm:text-left"
+            style={{ animation: "dialog-in 0.9s 0.2s both" }}
+          >
+            <div className="relative h-24 w-36 shrink-0 overflow-hidden rounded-2xl bg-white/90">
+              <Image src={tour.image} alt={`${tour.type} isometric plan`} fill sizes="144px" className="object-contain p-2" />
+            </div>
+            <div className="flex-1">
+              <p className="eyebrow text-blush-300">Your virtual tour is ready</p>
+              <p className="font-display mt-1 text-2xl">{tour.type} Virtual Tour</p>
+              <a
+                href={tour.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex items-center gap-2 rounded-full bg-blush-300 px-6 py-3 text-sm font-semibold text-plum-900 transition hover:bg-white"
+              >
+                <Icon name="expand" /> Start the 360° Tour
+              </a>
+            </div>
+          </div>
+        )}
 
         <ol className="mt-12 grid gap-4 text-left sm:grid-cols-3">
           {steps.map((s, i) => (
