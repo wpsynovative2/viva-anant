@@ -27,7 +27,7 @@ export default function About() {
                 alt="Porte-cochère and retail frontage at the Viva Anant entrance"
                 width={2560}
                 height={1280}
-                sizes="256px"
+                sizes="640px"
                 className="aspect-[4/3] object-cover"
               />
             </div>

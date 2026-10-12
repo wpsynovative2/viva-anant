@@ -63,12 +63,12 @@ export default function Overview() {
           </div>
           <div className="blob-2 absolute -bottom-10 -left-6 w-44 overflow-hidden border-8 border-cream shadow-xl sm:w-56">
             <Image
-              src="/images/hero-caterpillar-butterfly-shadow.webp"
-              alt="Caterpillar casting a butterfly shadow — the Viva Anant evolution motif"
-              width={2560}
-              height={1280}
-              sizes="224px"
-              className="aspect-square object-cover object-[80%_60%]"
+              src="/images/amenity-kids-play-area.webp"
+              alt="Children playing at the rooftop kids' play area at Viva Anant"
+              width={1672}
+              height={941}
+              sizes="640px"
+              className="aspect-square object-cover"
             />
           </div>
           <div className="absolute -right-2 top-8 rounded-2xl bg-white/90 px-5 py-4 shadow-xl backdrop-blur sm:-right-6">
