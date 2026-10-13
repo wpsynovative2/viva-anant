@@ -1,4 +1,5 @@
-import type { NextConfig } from "next";
+// Plain JS (not .ts) on purpose: hosts with an old glibc fall back to the WASM compiler,
+// which cannot transpile a TypeScript config.
 
 const securityHeaders = [
   { key: "X-Content-Type-Options", value: "nosniff" },
@@ -8,7 +9,8 @@ const securityHeaders = [
   { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
 ];
 
-const nextConfig: NextConfig = {
+/** @type {import("next").NextConfig} */
+const nextConfig = {
   poweredByHeader: false,
   images: {
     formats: ["image/avif", "image/webp"],
