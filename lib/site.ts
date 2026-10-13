@@ -8,7 +8,7 @@ export const site = {
   url: (process.env.NEXT_PUBLIC_SITE_URL || "https://www.vivaanant.in").replace(/\/$/, ""),
   phoneDisplay: "+91 80950 50929",
   phoneE164: "+918095050929",
-  whatsapp: "918095050929",
+  whatsapp: "917030106596",
   rera: "PM1240002600876",
   reraUrl: "https://maharera.maharashtra.gov.in/",
   address: {
