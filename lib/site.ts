@@ -9,7 +9,7 @@ export const site = {
     /\/$/,
     "",
   ),
-  phoneDisplay: "+91 80950 50929",
+  phoneDisplay: "+91 70301 08596",
   phoneE164: "+917030108596",
   whatsapp: "917030106596",
   rera: "PM1240002600876",

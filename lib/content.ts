@@ -565,6 +565,6 @@ export const faqs = [
   },
   {
     q: "How can I get the price and brochure for Viva Anant?",
-    a: "Click any 'Enquire Now' or 'Download Brochure' button, or call +91 80950 50929. Our relationship manager will share the price sheet, brochure and arrange a site visit.",
+    a: "Click any 'Enquire Now' or 'Download Brochure' button, or call +91 70301 08596. Our relationship manager will share the price sheet, brochure and arrange a site visit.",
   },
 ];
